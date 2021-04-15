@@ -24,7 +24,14 @@
         document.write(localStorage["username"])
         document.write(localStorage["password"])
     </script>
-    <script type="text/javascript" src="data.json"></script>
+    <script>
+      // JSON - JavaScript Object Notation
+      fetch("data.json")
+        .then(response => response.json())
+        .then(data => {
+          console.log(data);
+        })
+    </script>
         <!-- Content Stops-->
       </div>
   </body>
