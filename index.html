@@ -25,12 +25,14 @@
         document.write(localStorage["password"])
     </script>
     <script>
-      var temp = "";
+      var temp;
       fetch("./data.json")
       .then(response => {
        return response.json();
       })
-      .then(data => console.log(data));
+      .then(data => temp = data)
+      .then(() => console.log(temp));
+
       document.write(temp);
     </script>
         <!-- Content Stops-->
