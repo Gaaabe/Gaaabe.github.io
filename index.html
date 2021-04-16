@@ -19,6 +19,7 @@
     </div>
 
     <a type="submit" class="btn btn-primary" onclick="login_info(), window.location.reload();">Submit</a>
+    <pre id="json"></pre>
 
     <script type="text/javascript">
         document.write(localStorage["username"])
@@ -32,7 +33,7 @@
       })
       .then(data => temp = data)
       .then(() => console.log(temp))
-      .then(() =>  document.body.textContent += JSON.stringify(temp));
+      .then(() =>  document.getElementById("json").textContent = JSON.stringify(temp));
     </script>
         <!-- Content Stops-->
       </div>
