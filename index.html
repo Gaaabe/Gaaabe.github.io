@@ -32,7 +32,7 @@
       })
       .then(data => temp = data)
       .then(() => console.log(temp))
-      .then(() =>  document.write(JSON.stringify(temp)));
+      .then(() =>  document.body.textContent += JSON.stringify(temp));
     </script>
         <!-- Content Stops-->
       </div>
