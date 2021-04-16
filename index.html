@@ -31,12 +31,8 @@
        return response.json();
       })
       .then(data => temp = data)
-      .then(() => console.log(temp));
-
-      setTimeout(() => 100);
-
-      document.write(temp);
-      console.log(temp);
+      .then(() => console.log(temp))
+      .then(() =>  document.write(temp));
     </script>
         <!-- Content Stops-->
       </div>
