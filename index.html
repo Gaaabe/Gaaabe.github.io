@@ -10,32 +10,15 @@
     <script src="login_info.js"></script>
   </head>
   <body>
-    
-    <div class="mb-3">
-        <label for="event" class="input-group-text">Username</label>
-        <input name="event-name" type="text" class="form-control" id="username" placeholder="John123">
-        <label for="event" class="input-group-text">Password</label>
-        <input name="event-name" type="text" class="form-control" id="password" placeholder="John123">
-    </div>
-
-    <a type="submit" class="btn btn-primary" onclick="login_info(), window.location.reload();">Submit</a>
-    <div id="json"></div>
+    <script type="text/javascript" src="path/to/instafeed.min.js"></script>
+    <div id="instafeed"></div>
 
     <script type="text/javascript">
-        document.write(localStorage["username"])
-        document.write(localStorage["password"])
+        var feed = new Instafeed({
+          accessToken: 'IGQVJVRVFieDRMcWhxdVBUUU8tM3RYT24wODNsSnhGeEZAteVNpd2FweEludWotcmdibkRwUnNxdVN1UTlQTzNmVGotcF9MTjdEN0RyYWktRldxc1FUajRwbnhDVVhvOFp5QXRWNlg0dmd3THJnWTJ0QQZDZD',
+          template: '<a href="{{link}}"><img title="{{caption}}" src="{{image}}" /></a>'
+        });
+        feed.run();
     </script>
-    <script>
-      var temp;
-      fetch("./data.json")
-      .then(response => {
-       return response.json();
-      })
-      .then(data => temp = data)
-      .then(() => console.log(temp))
-      .then(() =>  document.getElementById("json").textContent = JSON.stringify(temp));
-    </script>
-        <!-- Content Stops-->
-      </div>
   </body>
 </html>
